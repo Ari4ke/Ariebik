@@ -1,6 +1,14 @@
 <?php
-include "../controllers/addBike.php";
+include("../controllers/update.php");
 
+/*Este código lo que hace es realizar una consulta cogieno la id del get y luego se la mete a un input en este caso id para cuando enviemos los datos*/
+$id = $_GET['id'];
+
+$sql="SELECT * FROM user_bike WHERE id = $id";
+
+$result=mysqli_query($conn,$sql);
+
+$row=mysqli_fetch_array($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,15 +56,16 @@ include "../controllers/addBike.php";
     <div class="row">
         <div class="col-12 col-sm-6 offset-sm-3">
             <div class="loginUserContent">
-                <form action="../controllers/addBike.php" method="POST">
+                <form action="../controllers/update.php" method="POST">
                     <div class="inputContents row">
                         <div class="col-lg-8 offset-lg-2">
                             <div class="loginTitle">
-                                <h1 class="text-center">Añadir bici</h1>
+                                <h1 class="text-center">Actualizar bici</h1>
                             </div>
                             <div class="userInfo row">
-                                    <input class="col-10 offset-1" type="text" name="brand">
-                                    <input class="col-10 offset-1" type="text" name="model">
+                                    <input type="hidden" name="id" value="<?= $row['id'] ?>"></input>
+                                    <input class="col-10 offset-1" type="text" name="brand" value="<?= $row['brand_bike'] ?>">
+                                    <input class="col-10 offset-1" type="text" name="model" value="<?= $row['model_bike'] ?>">
                                     <select name="bike_type[]" id="">
                                         <option value="mountain">Montaña</option>
                                         <option value="road">Carretera</option>
@@ -65,7 +74,7 @@ include "../controllers/addBike.php";
                                         <option value="bmx">BMX</option>
                                         <option value="triatlon">Triatlon</option>
                                     </select>
-                                    <input class="col-10 offset-1" type="text" name="bike_image">
+                                    <input class="col-10 offset-1" type="text" name="bike_image" value="<?= $row['bike_image'] ?>">
                                 <div class="offset-lg-6">
                                     <input class="col-6 offset-3" type="submit" class="btn btn-primary" name="submit" value="Enviar">
                                 </div>

@@ -12,5 +12,4 @@ include "../../../database/database.php";
 		header('Location: ../../views/panel.php');
 	}
 
-    var_dump("dfhiopgs");
  ?>

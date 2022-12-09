@@ -3,7 +3,7 @@ include "../../database/database.php";
 error_reporting(0);
 session_start();
 /*Este código es importante puesto que nos servirá para extraer de sql los datos de la tabla usuarios*/
-
+var_dump($_POST['brand']);
 $user_email = $_SESSION["email"];
 
 /*Consulta general para extraer cualquier tipo de datos*/

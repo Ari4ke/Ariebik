@@ -60,10 +60,10 @@ echo $_SESSION["email"];
                         <table class="table table-primary">
                             <thead>
                                 <tr>
-                                    <th scope="col">Marca</th>
-                                    <th scope="col">Modelo</th>
-                                    <th scope="col">Tipo</th>
-                                    <th scope="col">Imagen</th>
+                                    <th>Marca</th>
+                                    <th>Modelo</th>
+                                    <th>Tipo</th>
+                                    <th>Imagen</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -74,8 +74,9 @@ echo $_SESSION["email"];
                                     <td><?= $row['bike_image']?></td>
                                     <td>
                                         <div class="btn-group">
-                                            <a href="update.php?id=<?php echo $row['id']; ?>"  class="btn btn-success" >Editar</a>
+                                            <a href="../views/updateBike.php?id=<?php echo $row['id']; ?>"  class="btn btn-success" >Editar</a>
                                             <a href="../controllers/panel_crud/delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Eliminar</a>
+                                            <a href="../controllers/panel_crud/delete.php?id=<?php echo $row['id']; ?>" class="btn btn-info ">Entrada a taller</a>
                                         </div>
                                     </td>
                                 </tr>
