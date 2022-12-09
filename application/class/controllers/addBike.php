@@ -3,7 +3,6 @@ include "../../database/database.php";
 error_reporting(0);
 session_start();
 /*Este código es importante puesto que nos servirá para extraer de sql los datos de la tabla usuarios*/
-var_dump($_POST['brand']);
 $user_email = $_SESSION["email"];
 
 /*Consulta general para extraer cualquier tipo de datos*/
@@ -22,11 +21,12 @@ if(isset($_POST['submit'])){
     $brand = $_POST['brand'];
     $model = $_POST['model'];
     $bike_type = $_POST['bike_type'];
+    $bike_skin = $_POST['skin'];
     $bike_image = $_POST['bike_image'];
     
     $sql = "INSERT INTO user_bike VALUES ('','$brand',
-            '$model','$bike_type','','$bike_image','','$id')";
-    var_dump($sql);
+            '$model','$bike_type','$bike_skin','','$bike_image','','$id')";
+
     $result=mysqli_query($conn,$sql);
 
     if($result){
@@ -34,4 +34,6 @@ if(isset($_POST['submit'])){
     }
 }
 
+/*Con este código añadiremos la imagen que hemos capturado o elegido*/
+/*CREAR CODIGO PARA GUARDAR IMAGENES*/
 ?>

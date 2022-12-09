@@ -23,12 +23,14 @@ if(isset($_POST['submit'])){
     $model = $_POST['model'];
     $bike_type = $_POST['bike_type'];
     $bike_image = $_POST['bike_image'];
+    $skin = $_POST['bike_skin'];
     $id = $_POST['id'];
     
     $sql = "UPDATE user_bike SET 
     brand_bike = '$brand', 
     model_bike= '$model', 
-    bike_type= '$bike_type', 
+    bike_type= '$bike_type',
+    bike_skin= '$skin', 
     bike_image= '$bike_image'  
     WHERE id = $id";
 

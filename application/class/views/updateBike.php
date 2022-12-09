@@ -66,7 +66,7 @@ $row=mysqli_fetch_array($result);
                                     <input type="hidden" name="id" value="<?= $row['id'] ?>"></input>
                                     <input class="col-10 offset-1" type="text" name="brand" value="<?= $row['brand_bike'] ?>">
                                     <input class="col-10 offset-1" type="text" name="model" value="<?= $row['model_bike'] ?>">
-                                    <select name="bike_type[]" id="">
+                                    <select name="bike_type">
                                         <option value="mountain">Montaña</option>
                                         <option value="road">Carretera</option>
                                         <option value="mountain">Hibrida</option>
@@ -74,6 +74,7 @@ $row=mysqli_fetch_array($result);
                                         <option value="bmx">BMX</option>
                                         <option value="triatlon">Triatlon</option>
                                     </select>
+                                    <input class="col-10 offset-1" type="text" name="bike_skin" value="<?= $row['bike_skin'] ?>">
                                     <input class="col-10 offset-1" type="text" name="bike_image" value="<?= $row['bike_image'] ?>">
                                 <div class="offset-lg-6">
                                     <input class="col-6 offset-3" type="submit" class="btn btn-primary" name="submit" value="Enviar">

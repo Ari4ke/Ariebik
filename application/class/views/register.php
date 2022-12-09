@@ -1,7 +1,6 @@
 <?php 
 include "../controllers/registerUser.php";
 include "../../database/database.php";
-echo $_SESSION["email"];
 ?>
 <!DOCTYPE html>
 <html lang="en">

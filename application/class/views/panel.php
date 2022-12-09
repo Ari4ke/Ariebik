@@ -1,7 +1,6 @@
 <?php
 include "../controllers/panel_controller.php";
 
-echo $_SESSION["email"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,6 +62,7 @@ echo $_SESSION["email"];
                                     <th>Marca</th>
                                     <th>Modelo</th>
                                     <th>Tipo</th>
+                                    <th>Color o vinilado</th>
                                     <th>Imagen</th>
                                 </tr>
                             </thead>
@@ -71,12 +71,13 @@ echo $_SESSION["email"];
                                     <td><?= $row['brand_bike']?></td>
                                     <td><?= $row['model_bike']?></td>
                                     <td><?= $row['bike_type']?></td>
+                                    <td><?= $row['bike_skin']?></td>
                                     <td><?= $row['bike_image']?></td>
                                     <td>
                                         <div class="btn-group">
                                             <a href="../views/updateBike.php?id=<?php echo $row['id']; ?>"  class="btn btn-success" >Editar</a>
                                             <a href="../controllers/panel_crud/delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Eliminar</a>
-                                            <a href="../controllers/panel_crud/delete.php?id=<?php echo $row['id']; ?>" class="btn btn-info ">Entrada a taller</a>
+                                            <a href="../views/workshopForm.php?id=<?php echo $row['id']; ?>" class="btn btn-info ">Entrada a taller</a>
                                         </div>
                                     </td>
                                 </tr>
