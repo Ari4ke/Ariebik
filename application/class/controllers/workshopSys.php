@@ -9,10 +9,10 @@ if(isset($_POST['submit'])){
         $user_id = $_POST['user_id'];
         
         $sql = "INSERT INTO bike_incidence VALUES ('','$dbCheckbox',
-                '$comments','$bike_id','$user_id','')";
+                '$comments','$bike_id','','$user_id','')";
 
         $result=mysqli_query($conn,$sql);
-            var_dump($sql);
+        var_Dump($sql);
         if($result){
             header("location: ../views/panel.php");
         }
