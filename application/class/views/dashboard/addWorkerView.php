@@ -1,6 +1,6 @@
 <?php
-session_start();
-$user_email = $_SESSION["email"];
+include("../../controllers/dashboard/addWorker.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,9 +14,19 @@ $user_email = $_SESSION["email"];
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            label{
+                margin-top: 10px !important;
+                font-size: 20px;
+            }
+
+            .btn-success{
+                margin-top: 15px;
+            }
+        </style>
     </head>
     <body>
-        <div class="d-flex" id="wrapper">
+    <div class="d-flex" id="wrapper">
             <div class="border-end bg-white" id="sidebar-wrapper">
                 <div class="sidebar-heading border-bottom bg-light">Ariebik Dash</div>
                 <div class="list-group list-group-flush">
@@ -47,9 +57,37 @@ $user_email = $_SESSION["email"];
                     </div>
                 </nav>
                 <div class="container-fluid">
-                    <h1 class="mt-4">Bienvenido al Backend de Ariebik</h1>
-                    <div class="textUpdates">
-                        <span>10/12/2022 -> Sin actualizaciones</span>
+                    <h1 class="mt-4">Añadir Usuario</h1>
+                    <div class="row">
+                    <div class="col-12 col-sm-6 offset-sm-3">
+                        <div class="loginUserContent">
+                            <form action="../../controllers/dashboard/addWorker.php" method="POST">
+                                <div class="inputContents row">
+                                    <div class="col-lg-8 offset-lg-2">
+                                        <div class="loginTitle">
+                                        </div>
+                                        <div class="userInfo row">
+                                                <label for="role">Rol</label>
+                                                <select class="col-10" name="role_type">
+                                                    <option value="admin">Administrador</option>
+                                                    <option value="worker">Trabajador</option>
+                                                </select>
+                                                <label for="name">Nombre:</label>
+                                                <input class="col-10" id="name" type="text" name="name">
+                                                <label for="name">Apellidos</label>
+                                                <input class="col-10" type="text" name="surname">
+                                                <label for="name">Contraseña</label>
+                                                <input class="col-10" type="text" name="password">
+                                                <label for="name">Teléfono</label>
+                                                <input class="col-10" type="text" name="telephone">
+                                                <label for="name">Email</label>
+                                                <input class="col-10" type="text" name="email">
+                                                <input class="col-4 offset-3 btn btn-success" type="submit" name="submit" value="Enviar">
+                                        </div>                        
+                                    </div>               
+                                </div>
+                        </form>
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -57,7 +95,4 @@ $user_email = $_SESSION["email"];
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
     </body>
-</html>
-
-</body>
 </html>

@@ -15,7 +15,7 @@ include("../../controllers/dashboard/showWorkersCode.php");
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
-        <div class="d-flex" id="wrapper">
+    <div class="d-flex" id="wrapper">
             <div class="border-end bg-white" id="sidebar-wrapper">
                 <div class="sidebar-heading border-bottom bg-light">Ariebik Dash</div>
                 <div class="list-group list-group-flush">
@@ -27,8 +27,8 @@ include("../../controllers/dashboard/showWorkersCode.php");
                     </a>
                     <a class="nav-link dropdown-toggle list-group-item list-group-item-action list-group-item-light p-3" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administración</a>
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="showAllUsers.php">Usuarios</a>
-                            <a class="dropdown-item" href="#!">Añadir nuevo usuario</a>
+                            <a class="dropdown-item" href="showWorkerUsers.php">Usuarios</a>
+                            <a class="dropdown-item" href="addWorkerView.php">Añadir nuevo usuario</a>
                         </div>
                     </a>
                 </div>

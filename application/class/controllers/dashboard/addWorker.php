@@ -12,16 +12,9 @@ if(isset($_POST['submit'])){
     $password = $_POST['password'];
     $telephone = $_POST['telephone'];
     $email = $_POST['email'];
-    $id = $_POST['id'];
 
-    $sql = "UPDATE admin_users SET 
-    role = '$role', 
-    name = '$name', 
-    surname = '$surname',
-    pasword = '$password', 
-    telephone= '$telephone',
-    email = '$email'  
-    WHERE id = $id";
+    $sql = "INSERT INTO admin_users 
+    values('','$role','$name', '$surname','$password', '$telephone','$email','')";
     $result=mysqli_query($conn,$sql);
 
     if($result){
