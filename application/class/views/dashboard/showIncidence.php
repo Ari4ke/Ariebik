@@ -1,3 +1,7 @@
+<?php
+include("../../controllers/dashboard/incidences.php");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,7 +10,9 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Ariebik Dashboard</title>
-        
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.13.1/datatables.min.css"/>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.13.1/datatables.min.js"></script>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         
         <link href="css/styles.css" rel="stylesheet" />
@@ -43,10 +49,48 @@
                     </div>
                 </nav>
                 <div class="container-fluid">
-                    <h1 class="mt-4">Bienvenido al Backend de Ariebik</h1>
-                    <div class="textUpdates">
-                        <span>10/12/2022 -> Sin actualizaciones</span>
+                    <h1 class="mt-4">Incidencias de bicicletas</h1>
+                    <div class="table-responsive">
+                        <table id="incidenceTable" class="table table-primary">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">Id incidencia</th>
+                                    <th scope="col">Cliente</th>
+                                    <th scope="col">Id Bicicleta</th>
+                                    <th scope="col">Marca</th>
+                                    <th scope="col">Responsable Reparación</th>
+                                    <th scope="col">Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php 
+                                    while($row = $result->fetch_array()){
+                                ?>
+                                <tr class="">
+                                    <td>
+                                        <a href="showInfo.php?=<?= $row['id']?>" class="bi bi-search">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                        </svg>
+                                    </a>
+                                    </td>
+                                    
+                                    <td><?= $row['id'] ?></td>
+                                    <td><?= $row['name'] ?></td>
+                                    <td><?= $row['id_bici'] ?></td>
+                                    <td><?= $row['brand_bike'] ?></td>
+                                    <td><?= $row['id_responsible'] ?></td>
+                                    <td><?= $row['status'] ?></td>
+                                    
+                                </tr>
+                                <?php
+                                    }
+                                ?>
+                            </tbody>
+                        </table>
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -54,6 +98,8 @@
         <script src="js/scripts.js"></script>
     </body>
 </html>
-
-</body>
-</html>
+<script>
+    $(document).ready( function () {
+    $('#incidenceTable').DataTable();
+} );
+</script>

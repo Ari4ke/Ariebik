@@ -10,17 +10,9 @@ $result=mysqli_query($conn,$sql);
 
 while($row = $result->fetch_array()){
     $name = $row['name'];
-}
-
-/*Consulta general para extraer cualquier tipo de datos*/
-
-$sql="SELECT * from users where email='$user_email'";
-
-$result=mysqli_query($conn,$sql);
-
-while($row = $result->fetch_array()){
     $id = $row['id'];
 }
+
 
 /*Aquí vamos a relaizar una consulta para extraer la información d elas bicis que tiene el usuario*/
 

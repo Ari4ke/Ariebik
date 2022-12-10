@@ -16,8 +16,6 @@ include "../controllers/panel_controller.php";
     <link rel="stylesheet" href="../../../public_html/css/index.scss">
     <!--jquery-->
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <!--sweetalert2-->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
         <div class="navbarContent row">

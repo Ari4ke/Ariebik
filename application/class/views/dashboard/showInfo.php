@@ -1,3 +1,7 @@
+<?php
+include("../../controllers/dashboard/incidences.php");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,7 +10,9 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Ariebik Dashboard</title>
-        
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.13.1/datatables.min.css"/>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.13.1/datatables.min.js"></script>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         
         <link href="css/styles.css" rel="stylesheet" />
@@ -43,10 +49,7 @@
                     </div>
                 </nav>
                 <div class="container-fluid">
-                    <h1 class="mt-4">Bienvenido al Backend de Ariebik</h1>
-                    <div class="textUpdates">
-                        <span>10/12/2022 -> Sin actualizaciones</span>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -54,6 +57,8 @@
         <script src="js/scripts.js"></script>
     </body>
 </html>
-
-</body>
-</html>
+<script>
+    $(document).ready( function () {
+    $('#incidenceTable').DataTable();
+} );
+</script>
