@@ -26,10 +26,10 @@
                 <a href="register.php">Donde estamos</a>
             </div>
             <div class="d-flex">
-                <a href="login.php">Iniciar sesión</a>
+                <a href="application/class/views/login.php">Iniciar sesión</a>
             </div>
             <div class="d-flex">
-                <a href="register.php">Registrarse</a>
+                <a href="application/class/views/register.php">Registrarse</a>
             </div> 
       </div>
     </div>
