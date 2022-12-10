@@ -1,6 +1,5 @@
 <?php
-include("../../controllers/dashboard/showiIncidenceBike.php");
-
+include("../../controllers/dashboard/showWorkersCode.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,9 +9,9 @@ include("../../controllers/dashboard/showiIncidenceBike.php");
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Ariebik Dashboard</title>
-        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <link rel="stylesheet" href="../../../../public_html/css/dashboard/dashboard.scss">
+        
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
@@ -28,7 +27,7 @@ include("../../controllers/dashboard/showiIncidenceBike.php");
                     </a>
                     <a class="nav-link dropdown-toggle list-group-item list-group-item-action list-group-item-light p-3" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administración</a>
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#!">Usuarios</a>
+                            <a class="dropdown-item" href="showAllUsers.php">Usuarios</a>
                             <a class="dropdown-item" href="#!">Añadir nuevo usuario</a>
                         </div>
                     </a>
@@ -46,71 +45,13 @@ include("../../controllers/dashboard/showiIncidenceBike.php");
                         </div>
                     </div>
                 </nav>
-                <div class="row justify-content-center align-items-center g-2">
-                    <div class="col">
-                    <div class="container">
-                        <div class="header"><span>Información Usuario</span>
-                        </div>
-                        <div class="content">
-                            <ul>
-                            <h3>Nombre Cliente: <?= $row['name']?></h3>
-                            <h3>Apellidos: <?= $row['surname']?></h3>
-                            <h3>Número de teléfono: </h3>
-                            <h3>Email: <?= $row['email']?></h3>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
- 
-                <div class="row justify-content-center align-items-center g-2">
-                    <div class="col">
-                    <div class="container">
-                        <div class="header"><span>Información Bicicleta</span>
-                        </div>
-                        <div class="content">
-                            <ul>
-                            <h3>Marca bicicleta: <?= $row['brand_bike']?></h3>
-                            <h3>Modelo: <?= $row['model_bike']?></h3>
-                            <h3>Tipo de bicicleta: <?= $row['bike_type']?></h3>
-                            <h3>Color: <?= $row['bike_skin']?></h3>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="row justify-content-center align-items-center g-2">
-                    <div class="col">
-                    <div class="container">
-                        <div class="header"><span>Información Incidencia</span>
-
-                        </div>
-                        <div class="content">
-                            <ul>
-                            <h3>¿Que le hará?: <?= $row['what_to_do']?></h3>
-                            <h3>Comentarios del cliente: <?= $row['comments']?></h3>
-                            <h3>Encargado: <?= $row['id_responsible']?></h3>
-                            </ul>
-                        </div>
-                    </div>
-                    </div>
-                </div>
+                <div class="container-fluid">
+                    <h1 class="mt-4">Editar Usuario</h1>
                     
+                </div>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
     </body>
 </html>
-<script>
-    $(document).ready( function () {
-    $('#incidenceTable').DataTable();
-} );
-
-$(".header").click(function () {
-$header = $(this);
-$content = $header.next();
-$content.slideToggle(500, function () {
-});
-
-});
-</script>
