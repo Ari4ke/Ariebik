@@ -76,3 +76,9 @@ img {
 .loginUserContent{
 margin-top: 100px;
 }
+
+.btn-info:not(.workshop) {
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+}

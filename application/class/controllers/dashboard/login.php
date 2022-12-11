@@ -17,19 +17,32 @@ session_start();
 
 if(isset($_POST['submit'])){
     $user_email = $_POST['email'];
-    $password = md5($_POST['password']);
+    $password = $_POST['password'];
     
-    $sql="SELECT * from admin_users where email='$user_email' AND password='$password'";
+    $sql="SELECT count(*) as contar from admin_users where email='$user_email' AND pasword='$password'";
   
     $result=mysqli_query($conn,$sql);
     
-    if(empty($user_email)){
-      echo "<script>alert('Usuario o contraseña vacíos');</script>";
-      die(header("location: ../../../../admin.php"));
-    }
+    $array = mysqli_fetch_array($result);
 
-    if($_SESSION["email"] = $user_email){
-      header("location: ../../views/dashboard/panel.php");
+    if($_SESSION["email"] = $user_email && $_SESSION["pasword"] = $password){
+      $_SESSION["email"] = $user_email;
+      $_SESSION["pasword"] = $password;
+      if($array['contar'] > 0){
+        header("location: ../../views/dashboard/panel.php");
+      }else{
+        echo "
+      <script>
+      alert('Usuario o contraseña incorrectos');
+      window.location.replace('../../../../admin.php');
+      </script>";
+      }
+    }else{
+      echo "
+      <script>
+      alert('Usuario o contraseña vacíos');
+      window.location.replace('../../../../admin.php');
+      </script>";
     }
 }
 

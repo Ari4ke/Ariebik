@@ -46,7 +46,7 @@ include "../controllers/addBike.php";
 </div>
         <div class="container-fluid">
     <div class="row">
-        <div class="col-12 col-sm-6 offset-sm-3">
+        <div class="col-12 col-sm-8 col-xl-6 offset-xl-3 offset-sm-2">
             <div class="loginUserContent">
                 <form action="../controllers/addBike.php" method="POST">
                     <div class="inputContents row">
@@ -66,7 +66,7 @@ include "../controllers/addBike.php";
                                         <option value="triatlon">Triatlon</option>
                                     </select>
                                     <input class="col-10 offset-1" type="text" name="skin" placeholder="Color o Vinilado">
-                                <div class="offset-lg-6">
+                                <div class="logInUser">
                                     <input class="col-6 offset-3 btn-log" type="submit" name="submit" value="Enviar">
                                 </div>
                             </div>                        

@@ -168,21 +168,16 @@ $row=mysqli_fetch_array($result);
                                                 </label>
                                             </div>
                                         </div>
-                                    </div> 
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-10 offset-1">
                                     <hr>
                                         <h2>Comentarios</h2>
                                         <div class="form-group">
                                             <textarea  name="comments" class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
                                         </div>
                                         <div class="logInUser">
-                                            <input class="col-3 btn-log" type="submit" name="submit" value="Enviar">
+                                            <input class="col-3 offset-4 btn-log" type="submit" name="submit" value="Enviar">
                                         </div>
-                                    </div>
-                                </div>
                                     
                             </div>                        
                         </div>               

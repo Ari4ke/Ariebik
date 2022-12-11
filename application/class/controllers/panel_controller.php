@@ -2,7 +2,7 @@
 include "../../database/database.php";
 session_start();
 $user_email = $_SESSION["email"];
-
+$password = $_SESSION["password"];
 /* Con esta consulta sacamos la info de la tabla de users*/
 $sql="SELECT * from users where email='$user_email'";
 
