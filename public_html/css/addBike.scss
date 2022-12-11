@@ -5,7 +5,7 @@
     opacity: 0.9;
 }
 
-.inputContents .userInfo input:not(.btn-log){
+.inputContents .userInfo input:not(.btn-log), select{
     margin-bottom: 20px;
     height: 50px;
     border-radius: 10px;

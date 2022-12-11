@@ -10,4 +10,5 @@ JOIN users ON user_bike.user_id = users.id WHERE bike_incidence.id = $id GROUP B
 $result=mysqli_query($conn,$sql);
 
 $row = $result->fetch_array();
+
 ?>

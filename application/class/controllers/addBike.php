@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
     $bike_image = $_POST['bike_image'];
     
     $sql = "INSERT INTO user_bike VALUES ('','$brand',
-            '$model','$bike_type','$bike_skin','$bike_image','','$id')";
+            '$model','$bike_type','$bike_skin','','','$id')";
 
     $result=mysqli_query($conn,$sql);
 

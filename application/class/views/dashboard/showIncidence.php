@@ -80,7 +80,7 @@ include("../../controllers/dashboard/incidences.php");
                                     <td><?= $row['name'] ?></td>
                                     <td><?= $row['id_bici'] ?></td>
                                     <td><?= $row['brand_bike'] ?></td>
-                                    <td><?= $row['id_responsible'] ?></td>
+                                    <td><?= $row['responsable_name'] ?></td>
                                     <td><?= $row['status'] ?></td>
                                     
                                 </tr>

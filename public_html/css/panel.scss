@@ -1,7 +1,9 @@
 body{
     background-image: url(../images/bicixula2.jpg);
 }
-.navbarContent a{
+
+/*NAVBAR CONTENTS!*/
+.navbarContent a:not(.btn-info){
     text-decoration: none;
     color: #4EA7D4;
 }
@@ -24,22 +26,8 @@ body{
     border: none;
 }
 
-.mainBodyCont{
-    margin-top: 50px;
-    border: solid 2px #4EA7D4;
-    border-radius: 20px;
-    background-color: #F6FCFC;
-    opacity: 0.9;
-}
-
-.textContainer{
-    margin-top: 20px;
-    padding: 20px;
-    opacity: 0.8;
-}
-
 hr{
-    color: white;
+    color: #4EA7D4;
 }
 
 img {
@@ -49,13 +37,35 @@ img {
     max-width: 100%;
 }
 
-p{
-    text-align: justify;
+.bodyContents{
+    margin-top: 50px;
+    border: solid 2px #4EA7D4;
+    border-radius: 20px;
+    background-color: #F6FCFC;
+    opacity: 0.9;
 }
 
 .btn-info:not(.workshop){
-    margin-top: 5px;
     border:1px solid white;
     border-radius: 20px;
     color: white;
+}
+
+.btn-group a{
+    border-radius: 20px;
+    color: white;
+}
+
+td, th{
+    text-align: center;
+}
+
+h1{
+    font-weight: 500;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+table{
+    border: 2px solid #4EA7D4;
 }

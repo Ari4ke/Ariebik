@@ -1,15 +1,22 @@
 .loginUserContent{
-    border: solid 1px red;
+    border: solid 2px #4EA7D4;
     border-radius: 20px;
+    background-color: #F6FCFC;
+    opacity: 0.9;
 }
 
 .inputContents .userInfo input:not(.btn-log){
     margin-bottom: 20px;
     height: 50px;
     border-radius: 10px;
-    border:solid 1px;
+    border:solid 2px;
+    color: #4EA7D4;
 }
 
+.inputContents .userInfo a{
+    color:#4EA7D4;
+    text-decoration: none;
+}
 .userInfo div{
     padding: 20px 0 20px 0;
 }
@@ -21,4 +28,51 @@
     border: solid 0px;
     border-radius: 30px;
     height: 50px;
+    background-color: #4EA7D4;
+    color: white;
+}
+
+body{
+    background-image: url(../images/bicixula2.jpg);
+}
+
+/*NAVBAR CONTENTS!*/
+.navbarContent a{
+    text-decoration: none;
+    color: #4EA7D4;
+}
+
+.navbar{
+    opacity: 0.8;
+    border-bottom: 3px solid #4EA7D4;
+}
+.navbar-brand img{
+    height: 50px;
+}
+
+@media (min-width: 370px) and (max-width: 1024px){
+    .navbar-brand img{
+        height: 30px;
+    }  
+}
+
+.navbar-toggler{
+    border: none;
+}
+
+hr{
+    color: white;
+}
+
+img {
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+/*LOGIN SCSS*/
+
+.loginUserContent{
+margin-top: 100px;
 }

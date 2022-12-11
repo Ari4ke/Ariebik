@@ -1,7 +1,21 @@
 <?php
-include("../../controllers/dashboard/showiIncidenceBike.php");
+include_once("../../controllers/dashboard/showiIncidenceBike.php");
 session_start();
 $user_email = $_SESSION["email"];
+
+$id = $_GET['id'];
+
+if(isset($_POST['submit'])){
+    $status = $_POST['status_type'];
+    $id_incidence = $_POST['id'];
+    
+    $sql = "UPDATE bike_incidence SET 
+    status = '$status'
+    WHERE id = $id_incidence";
+    var_dump($sql);
+    $result=mysqli_query($conn,$sql);
+    
+}
 
 ?>
 <!DOCTYPE html>
@@ -90,8 +104,25 @@ $user_email = $_SESSION["email"];
                             <ul>
                             <h3>¿Que le hará?: <?= $row['what_to_do']?></h3>
                             <h3>Comentarios del cliente: <?= $row['comments']?></h3>
-                            <h3>Encargado: <?= $row['id_responsible']?></h3>
+                            <h3>Estado de la incidencia: <?= $row['status']?></h3>
+                            <h3>Encargado: <?= $row['responsable_name']?></h3>
                             </ul>
+                            <form action="showInfo.php?id=<?= $row['id'] ?>" method="POST">
+                            <div>
+                            <input type="hidden" name="id" value="<?= $row['id'] ?>"></input>
+                            <select class="col-lg-3" style="margin-left:30px;" name="status_type">
+                                <option value="Asignada">Asignada</option>
+                                <option value="Reparada">Reparada</option>
+                                <option value="En progreso">En progreso</option>
+                                <option value="Finalizado">Finalizado</option>
+                                <option value="Anulado">Anulado</option>
+                                <option value="En espera">En espera</option>
+                                <option value="Entregado">Entregado</option>
+                                <option value="Incidencia en estudio">Incidencia en estudio</option>
+                            </select>
+                            <input type="submit" value="Actualizar" name="submit">
+                            </div>
+                            </form>
                         </div>
                     </div>
                     </div>

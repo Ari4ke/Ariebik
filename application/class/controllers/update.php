@@ -30,8 +30,7 @@ if(isset($_POST['submit'])){
     brand_bike = '$brand', 
     model_bike= '$model', 
     bike_type= '$bike_type',
-    bike_skin= '$skin', 
-    bike_image= '$bike_image'  
+    bike_skin= '$skin'  
     WHERE id = $id";
 
     $result=mysqli_query($conn,$sql);

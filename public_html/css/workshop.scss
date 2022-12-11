@@ -1,11 +1,4 @@
-.loginUserContent{
-    border: solid 2px #4EA7D4;
-    border-radius: 20px;
-    background-color: #F6FCFC;
-    opacity: 0.9;
-}
-
-.inputContents .userInfo input:not(.btn-log){
+.inputContents .userInfo input:not(.btn-log) input:not(.inputContents), select{
     margin-bottom: 20px;
     height: 50px;
     border-radius: 10px;
@@ -17,11 +10,8 @@
     color:#4EA7D4;
     text-decoration: none;
 }
-.userInfo div{
-    padding: 20px 0 20px 0;
-}
 .loginTitle h1{
-    padding: 40px 20px 40px 20px;
+    padding: 40px 20px 10px 20px;
 }
 
 .btn-log{
@@ -61,7 +51,7 @@ body{
 }
 
 hr{
-    color: white;
+    color: #4EA7D4;
 }
 
 img {
@@ -71,8 +61,10 @@ img {
     max-width: 100%;
 }
 
-/*LOGIN SCSS*/
-
-.loginUserContent{
-margin-top: 100px;
+.userWorkFormContainer{
+    margin-top: 50px;
+    border: solid 2px #4EA7D4;
+    border-radius: 20px;
+    background-color: #F6FCFC;
+    opacity: 0.9;
 }

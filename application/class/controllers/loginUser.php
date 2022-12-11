@@ -10,9 +10,13 @@ if(isset($_POST['submit'])){
     $sql="SELECT * from users where email='$user_email' AND password='$password'";
   
     $result=mysqli_query($conn,$sql);
-    
+
     if(empty($user_email)){
-      echo "<script>alert('Usuario o contraseña vacíos');</script>";
+      echo "
+      <script>
+      alert('Usuario o contraseña vacíos');
+      window.location.replace('../views/login.php');
+      </script>";
     }
 
     if($_SESSION["email"] = $user_email){

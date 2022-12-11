@@ -14,34 +14,36 @@ include "../../database/database.php";
     <link rel="stylesheet" href="../../../public_html/css/REGISTER.scss">
 </head>
 <body>
-        <div class="navbarContent row">
-        <nav class="navbar navbar-expand-lg bg-light col-lg-8 offset-lg-2">
-            <div class="container-fluid">
-            <a class="navbar-brand" href="../../../index.php"">LOGO</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
-                    <div class="d-flex">
-                        <a href="login.php">Quienes somos</a>
-                    </div>
-                    <div class="d-flex">
-                        <a href="register.php">Donde estamos</a>
-                    </div>
-                    <div class="d-flex">
-                        <a href="login.php">Iniciar sesión</a>
-                    </div>
-                    <div class="d-flex">
-                        <a href="register.php">Registrarse</a>
-                    </div> 
+<div class="navbarContent">
+  <nav class="navbar navbar-expand-lg bg-light col-12 col-lg-8 offset-lg-2">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../../../index.php">
+        <img src="../../../public_html/images/Ariebik logos/ATECH.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <span>Menu</span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+            <div class="d-flex">
+                <a href="login.php">Quiénes somos</a>
             </div>
+            <div class="d-flex">
+                <a href="register.php">Dónde estamos</a>
             </div>
-        </nav>
-        </div>
-
+            <div class="startSession">
+                <a href="login.php">Iniciar sesión</a>
+            </div>
+            <div class="register">
+                <a href="register.php">Registrarse</a>
+            </div> 
+      </div>
+    </div>
+  </nav>
+</div>
     <div class="container-fluid">
     <div class="row">
-        <div class="col-12 col-sm-6 offset-sm-3">
+        <div class="col-12 col-sm-8 col-xl-6 offset-xl-3 offset-sm-2">
             <div class="loginUserContent">
                 <form action="../controllers/registerUser.php" method="POST">
                     <div class="inputContents row">
@@ -55,8 +57,8 @@ include "../../database/database.php";
                                     <input class="col-10 offset-1" type="text" name="email" placeholder="Email">
                                     <input class="col-10 offset-1" type="password" name="password" placeholder="Contraseña">
                                 <a class="col-10 offset-1" href="login.php">¿Ya tienes una cuenta?</a> 
-                                <div class="offset-lg-6">
-                                    <input class="col-6 offset-3" type="submit" class="btn btn-primary" name="submit" value="Enviar">
+                                <div class="logInUser">
+                                    <input class="col-6 offset-3 btn-log" type="submit" name="submit" value="Enviar">
                                 </div>
                             </div>                        
                         </div>               
