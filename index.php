@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,13 +35,18 @@ session_start();
             <div class="d-flex">
                 <a href="register.php">Dónde estamos</a>
             </div>
+            <?php if(empty($_SESSION['email'])){?>
             <div class="startSession">
-                <a href="application/class/views/login.php">Iniciar sesión</a>
+                <a href="application/class/views/login.php" class="btn btn-success">Iniciar sesión</a>
             </div>
             <div class="register">
-                <a href="application/class/views/register.php">Registrarse</a>
+                <a href="application/class/views/register.php" class="btn btn-info">Registrarse</a>
             </div>
+            <?php } ?>
             <?php if(!empty($_SESSION['email'])){?>
+              <div>
+                  <a href="application/class/views/login.php"  class="btn btn-danger">Cerrar sesión</a>
+              </div>
               <div>
                   <a href="application/class/views/panel.php"  class="btn btn-info" >Acceder al panel</a>
               </div>

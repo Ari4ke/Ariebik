@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
       $_SESSION["password"] = $password;
       if($array['contar'] > 0){
         header("location: ../views/panel.php");
-      }else{
+      }else{ 
         echo "
       <script>
       alert('Usuario o contraseña incorrectos');

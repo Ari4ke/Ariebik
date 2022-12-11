@@ -82,3 +82,9 @@ margin-top: 100px;
     border-radius: 20px;
     color: white;
 }
+
+.btn-danger:not(.delete){
+    border:1px solid white;
+    border-radius: 20px;
+    color: white !important;
+}

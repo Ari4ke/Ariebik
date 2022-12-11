@@ -45,8 +45,11 @@ $row=mysqli_fetch_array($result);
                     <a href="register.php">Dónde estamos</a>
                 </div>
                 <div class="startSession">
-                    <a href="login.php">Cerrar sesión</a>
+                    <a href="login.php" class="btn btn-danger">Cerrar sesión</a>
                 </div>
+                <div>
+                  <a href="panel.php"  class="btn btn-info" >Acceder al panel</a>
+              </div>
         </div>
         </div>
     </nav>

@@ -42,9 +42,6 @@ include("../../controllers/dashboard/showWorkersCode.php");
                             <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
                                 <li class="nav-item active"><a class="nav-link" href="../../../../admin.php">Cerrar sesión</a></li>
                             </ul>
-                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                                <li class="nav-item active"><a class="nav-link" href="../../../../index.php">Ir a la web</a></li>
-                            </ul>
                         </div>
                     </div>
                 </nav>
@@ -77,7 +74,7 @@ include("../../controllers/dashboard/showWorkersCode.php");
                                     <td>
                                         <div class="btn-group">
                                             <a href="../../views/dashboard/updateWorkerView.php?id=<?php echo $row['id']; ?>"  class="btn btn-success" >Editar</a>
-                                            <a href="../controllers/panel_crud/delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Eliminar</a>
+                                            <a href="../../controllers/dashboard/deleteWorker.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Eliminar</a>
                                         </div>
                                     </td>
                                 </tr>

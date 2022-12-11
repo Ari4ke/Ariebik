@@ -51,6 +51,12 @@ img {
     color: white;
 }
 
+.btn-danger:not(.delete){
+    border:1px solid white;
+    border-radius: 20px;
+    color: white !important;
+}
+
 .btn-group a{
     border-radius: 20px;
     color: white;

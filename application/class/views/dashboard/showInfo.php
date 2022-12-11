@@ -59,9 +59,6 @@ if(isset($_POST['submit'])){
                             <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
                                 <li class="nav-item active"><a class="nav-link" href="../../../../admin.php">Cerrar sesión</a></li>
                             </ul>
-                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                                <li class="nav-item active"><a class="nav-link" href="../../../../index.php">Ir a la web</a></li>
-                            </ul>
                         </div>
                     </div>
                 </nav>

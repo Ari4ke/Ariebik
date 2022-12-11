@@ -38,7 +38,7 @@ include "../controllers/panel_controller.php";
                         <a href="register.php">Dónde estamos</a>
                     </div>
                     <div class="startSession">
-                        <a href="login.php">Cerrar sesión</a>
+                        <a href="login.php" class="btn btn-danger">Cerrar sesión</a>
                     </div>
                     <div>
                         <a href="addBikeUser.php"  class="btn btn-info" >Añadir bicicletas</a>
@@ -52,7 +52,7 @@ include "../controllers/panel_controller.php";
                 <div class="bodyContents">
                     <div class="container-fluid">
                         <div class="headerContents">
-                        <h1 class="text-center">¡Hola <?= $name?> este es tu usuario!</h1>
+                        <h1 class="text-center">¡Bienvenido/a <?= $name?> este es tu panel de bicicletas!</h1>
                         <hr>
                         </div>
                         <table class="table">
@@ -78,7 +78,7 @@ include "../controllers/panel_controller.php";
                                     <td class="text-center"colspan="4">
                                         <div class="btn-group">
                                             <a href="../views/updateBike.php?id=<?php echo $row['id']; ?>"  class="btn btn-success" >Editar</a>
-                                            <a href="../controllers/panel_crud/delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Eliminar</a>
+                                            <a href="../controllers/panel_crud/delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger delete">Eliminar</a>
                                             <a href="../views/workshopForm.php?id=<?php echo $row['id']; ?>" class="btn btn-info workshop">Entrada a taller</a>
                                         </div>
                                     </td>

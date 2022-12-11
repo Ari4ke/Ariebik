@@ -59,3 +59,16 @@ p{
     border-radius: 20px;
     color: white;
 }
+
+.btn-success:not(.workshop){
+    margin-top: 5px;
+    border:1px solid white;
+    border-radius: 20px;
+    color: white;
+}
+
+.btn-danger:not(.delete){
+    border:1px solid white;
+    border-radius: 20px;
+    color: white !important;
+}

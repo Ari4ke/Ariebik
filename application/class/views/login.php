@@ -17,8 +17,8 @@ session_destroy();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../../../public_html/css/login.scss">
     <!--jquery-->
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <title>Login</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zl
+    <title>Login</title>B5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="navbarContent">
@@ -39,10 +39,10 @@ session_destroy();
                 <a href="register.php">Dónde estamos</a>
             </div>
             <div class="startSession">
-                <a href="login.php">Iniciar sesión</a>
+                <a href="login.php" class="btn btn-success">Iniciar sesión</a>
             </div>
             <div class="register">
-                <a href="register.php">Registrarse</a>
+                <a href="register.php" class="btn btn-info">Registrarse</a>
             </div> 
       </div>
     </div>

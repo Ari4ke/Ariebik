@@ -70,3 +70,15 @@ img {
     background-color: #F6FCFC;
     opacity: 0.9;
 }
+
+.btn-info:not(.workshop){
+    border:1px solid white;
+    border-radius: 20px;
+    color: white;
+}
+
+.btn-danger:not(.delete){
+    border:1px solid white;
+    border-radius: 20px;
+    color: white !important;
+}
