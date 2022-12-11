@@ -5,8 +5,16 @@
     opacity: 0.9;
 }
 
-.inputContents .userInfo input:not(.btn-log), select{
-    margin-bottom: 20px;
+.inputContents .userInfo input:not(.btn-log){
+    margin-top: 20px;
+    height: 50px;
+    border-radius: 10px;
+    border:solid 2px;
+    color: #4EA7D4;
+}
+
+.inputContents .userInfo select{
+    margin-top: 20px;
     height: 50px;
     border-radius: 10px;
     border:solid 2px;
@@ -87,4 +95,10 @@ margin-top: 100px;
     border:1px solid white;
     border-radius: 20px;
     color: white !important;
+}
+
+.error{
+    padding-right: 0px;
+    padding-left: 0px;
+    color: red;
 }

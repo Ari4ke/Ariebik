@@ -17,8 +17,8 @@ session_destroy();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../../../public_html/css/login.scss">
     <!--jquery-->
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zl
-    <title>Login</title>B5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <title>Login</title>
 </head>
 <body>
 <div class="navbarContent">
@@ -61,13 +61,11 @@ session_destroy();
                                             <h1 class="text-center">Iniciar sesión con Ariebik</h1>
                                         </div>
                                         <div class="userInfo row">
-                                                <input class="col-10 offset-1" type="text" class="email" id="email" name="email" placeholder="Email">
-                                                <span class="errorEmail" id="email_error"></span>
-                                                <input class="col-10 offset-1" type="password" class="password" name="password" placeholder="Contraseña">
-                                                <span class="errorPassword" id="error_password"></span>
+                                                <input class="col-10 offset-1" type="text" id="email" name="email" placeholder="Email">
+                                                <input class="col-10 offset-1" type="password" id="password" name="password" placeholder="Contraseña">
                                             <a class="col-10 offset-1" href="register.php">¿Aún no te has registrado?</a> 
                                             <div class="logInUser">
-                                                <input class="col-6 offset-3 btn-log" type="submit" class="btn btn-primary" name="submit" value="Enviar">
+                                                <input class="col-6 offset-3 btn-log" type="submit" id="sendLog" class="btn btn-primary" name="submit" value="Enviar">
                                             </div>
                                         </div>                        
                                     </div>               
@@ -82,23 +80,33 @@ session_destroy();
 </body>
 </html>
 <script>
-    $(document).ready(function(){
-        $('#startSession input').keyup(function(){
-                if(validateEmail()){
-                    $("#email").css("border", "2px solid green");
-                }else{
-                    $("#email").css("border", "2px solid red");
-                }
+    $(document).ready(function() {
+        $('#sendLog').prop('disabled', true);
+        $('#email').blur(function() {
+            if ($('#email').val().length < 1) {
+            $('#email').after('<span class="error col-10 offset-1">Este campo es necesario</span>');
+            $('#email').css("border-color", "red");
+            $('#sendLog').prop('disabled', true);
+            }else{
+            $(".error").remove();
+            $('#email').css("border-color", "#009E07");
+            $('#sendLog').prop('disabled', false);
+            }
         });
-    });
 
-    function validateEmail(){
-        var email= $('#email').val();
-        var reg = /^ w+( .- w+)*@ w+( .- w+)*( . w 2 3 )+$/;
-        if(reg.test(email)){
-            return true;
-        }else{
-            return false;
-        }
-    }
+        $('#password').blur(function() {
+            $(".error").remove();
+            if ($('#password').val().length < 1) {
+            $('#password').after('<span class="error col-10 offset-1">Este campo es necesario</span>');
+            $('#password').css("border-color", "red");
+            $('#sendLog').prop('disabled', true);
+            }else{
+            $(".error").remove();
+            $('#password').css("border-color", "#009E07");
+            $('#sendLog').prop('disabled', false);
+            }
+        });
+
+        
+    });
 </script>

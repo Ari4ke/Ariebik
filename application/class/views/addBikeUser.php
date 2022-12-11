@@ -58,8 +58,8 @@ include "../controllers/addBike.php";
                                 <h1 class="text-center">Añadir bici</h1>
                             </div>
                             <div class="userInfo row">
-                                    <input class="col-10 offset-1" type="text" name="brand" placeholder="Marca">
-                                    <input class="col-10 offset-1" type="text" name="model" placeholder="Modelo">
+                                    <input class="col-10 offset-1" type="text" id="brand" name="brand" placeholder="Marca">
+                                    <input class="col-10 offset-1" type="text" id="model" name="model" placeholder="Modelo">
                                     <select class="col-10 offset-1" name="bike_type">
                                         <option value="mountain">Montaña</option>
                                         <option value="road">Carretera</option>
@@ -68,9 +68,9 @@ include "../controllers/addBike.php";
                                         <option value="bmx">BMX</option>
                                         <option value="triatlon">Triatlon</option>
                                     </select>
-                                    <input class="col-10 offset-1" type="text" name="skin" placeholder="Color o Vinilado">
+                                    <input class="col-10 offset-1" type="text" id="skin" name="skin" placeholder="Color o Vinilado">
                                 <div class="logInUser">
-                                    <input class="col-6 offset-3 btn-log" type="submit" name="submit" value="Enviar">
+                                    <input class="col-6 offset-3 btn-log" id="sendLog" type="submit" name="submit" value="Enviar">
                                 </div>
                             </div>                        
                         </div>               
@@ -82,3 +82,47 @@ include "../controllers/addBike.php";
     </div>
 </body>
 </html>
+<script>
+    $(document).ready(function() {
+        $('#sendLog').prop('disabled', true);
+        $('#brand').blur(function() {
+            if ($('#brand').val().length < 1) {
+            $('#brand').after('<span class="error col-10 offset-1">Este campo es necesario</span>');
+            $('#brand').css("border-color", "red");
+            $('#sendLog').prop('disabled', true);
+            }else{
+            $(".error").remove();
+            $('#brand').css("border-color", "#009E07");
+            $('#sendLog').prop('disabled', false);
+            }
+        });
+
+        $('#model').blur(function() {
+            $(".error").remove();
+            if ($('#model').val().length < 1) {
+            $('#model').after('<span class="error col-10 offset-1">Este campo es necesario</span>');
+            $('#model').css("border-color", "red");
+            $('#sendLog').prop('disabled', true);
+            }else{
+            $(".error").remove();
+            $('#model').css("border-color", "#009E07");
+            $('#sendLog').prop('disabled', false);
+            }
+        });
+
+        $('#skin').blur(function() {
+            $(".error").remove();
+            if ($('#skin').val().length < 1) {
+            $('#skin').after('<span class="error col-10 offset-1">Este campo es necesario</span>');
+            $('#skin').css("border-color", "red");
+            $('#sendLog').prop('disabled', true);
+            }else{
+            $(".error").remove();
+            $('#skin').css("border-color", "#009E07");
+            $('#sendLog').prop('disabled', false);
+            }
+        });
+
+        
+    });
+</script>
