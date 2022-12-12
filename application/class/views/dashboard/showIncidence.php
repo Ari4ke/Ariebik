@@ -1,6 +1,9 @@
 <?php
 include("../../controllers/dashboard/incidences.php");
 
+if(!isset($_SESSION['email'])){
+    header("location: ../../../../index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

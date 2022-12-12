@@ -1,5 +1,7 @@
 <?php
 include("../../database/database.php");
+error_reporting(0);
+session_start();
 
 if(isset($_POST['submit'])){
     if(!empty($_POST['check_list'])){
@@ -12,7 +14,7 @@ if(isset($_POST['submit'])){
                 '$comments','En espera','$bike_id','$user_id','No Asignado')";
 
         $result=mysqli_query($conn,$sql);
-        var_Dump($sql);
+
         if($result){
             header("location: ../views/panel.php");
         }

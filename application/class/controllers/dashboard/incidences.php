@@ -1,6 +1,6 @@
 <?php
 include("../../../database/database.php");
-
+session_start();
 /*mega consulta para sacar la información más relevante de las bicicletas!!!*/
 $sql="SELECT bike_incidence.id, 
 users.name, 

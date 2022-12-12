@@ -1,6 +1,10 @@
 <?php
 session_start();
 $user_email = $_SESSION["email"];
+
+if(!isset($_SESSION['email'])){
+    header("location: ../../../../index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

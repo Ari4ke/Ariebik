@@ -1,6 +1,8 @@
 <?php
 include "../controllers/panel_controller.php";
-
+if(!isset($_SESSION['email'])){
+    header("location: ../../../index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,10 +34,10 @@ include "../controllers/panel_controller.php";
             </button>
             <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
                     <div class="d-flex">
-                        <a href="login.php">Quiénes somos</a>
+                        <a href="">Quiénes somos</a>
                     </div>
                     <div class="d-flex">
-                        <a href="register.php">Dónde estamos</a>
+                        <a href="">Dónde estamos</a>
                     </div>
                     <div class="startSession">
                         <a href="login.php" class="btn btn-danger">Cerrar sesión</a>

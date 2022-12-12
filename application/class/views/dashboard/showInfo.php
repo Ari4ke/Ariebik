@@ -1,21 +1,11 @@
 <?php
 include_once("../../controllers/dashboard/showiIncidenceBike.php");
-session_start();
-$user_email = $_SESSION["email"];
 
-$id = $_GET['id'];
-
-if(isset($_POST['submit'])){
-    $status = $_POST['status_type'];
-    $id_incidence = $_POST['id'];
-    
-    $sql = "UPDATE bike_incidence SET 
-    status = '$status'
-    WHERE id = $id_incidence";
-    var_dump($sql);
-    $result=mysqli_query($conn,$sql);
-    
+if(!isset($_SESSION['email'])){
+    header("location: ../../../../index.php");
 }
+
+$user_email = $_SESSION["email"];
 
 ?>
 <!DOCTYPE html>
@@ -107,9 +97,8 @@ if(isset($_POST['submit'])){
                             <h3>Estado de la incidencia: <?= $row['status']?></h3>
                             <h3>Encargado: <?= $row['responsable_name']?></h3>
                             </ul>
-                            <form action="showInfo.php?id=<?= $row['id'] ?>" method="POST">
+                            <form action="" method="POST">
                             <div>
-                            <input type="hidden" name="id" value="<?= $row['id'] ?>"></input>
                             <select class="col-lg-3" style="margin-left:30px;" name="status_type">
                                 <option value="Asignada">Asignada</option>
                                 <option value="Reparada">Reparada</option>

@@ -1,6 +1,9 @@
 <?php
 include("../../controllers/dashboard/updateWorker.php");
 
+if(!isset($_SESSION['email'])){
+    header("location: ../../../../index.php");
+}
 /*Este código lo que hace es realizar una consulta cogieno la id del get y luego se la mete a un input en este caso id para cuando enviemos los datos*/
 $id = $_GET['id'];
 

@@ -1,5 +1,6 @@
 <?php
 include("../../../database/database.php");
+session_start();
 
 $id = $_GET['id'];
 $sql="SELECT * 
@@ -10,5 +11,6 @@ JOIN users ON user_bike.user_id = users.id WHERE bike_incidence.id = $id GROUP B
 $result=mysqli_query($conn,$sql);
 
 $row = $result->fetch_array();
+
 
 ?>

@@ -30,10 +30,10 @@ session_start();
       </button>
       <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
             <div class="d-flex">
-                <a href="login.php">Quiénes somos</a>
+                <a href="">Quiénes somos</a>
             </div>
             <div class="d-flex">
-                <a href="register.php">Dónde estamos</a>
+                <a href="">Dónde estamos</a>
             </div>
             <?php if(empty($_SESSION['email'])){?>
             <div class="startSession">

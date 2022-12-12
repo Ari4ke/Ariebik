@@ -1,6 +1,9 @@
 <?php
 include("../controllers/workshopSys.php");
 
+if(!isset($_SESSION['email'])){
+    header("location: ../../../index.php");
+}
 /*Este código lo que hace es realizar una consulta cogieno la id del get y luego se la mete a un input en este caso id para cuando enviemos los datos*/
 $id = $_GET['id'];
 
@@ -9,6 +12,7 @@ $sql="SELECT id, user_id FROM user_bike WHERE id= $id";
 $result=mysqli_query($conn,$sql);
 
 $row=mysqli_fetch_array($result);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,10 +43,10 @@ $row=mysqli_fetch_array($result);
         </button>
         <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
                 <div class="d-flex">
-                    <a href="login.php">Quiénes somos</a>
+                    <a href="">Quiénes somos</a>
                 </div>
                 <div class="d-flex">
-                    <a href="register.php">Dónde estamos</a>
+                    <a href="">Dónde estamos</a>
                 </div>
                 <div class="startSession">
                     <a href="login.php" class="btn btn-danger">Cerrar sesión</a>

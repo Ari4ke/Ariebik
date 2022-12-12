@@ -1,5 +1,6 @@
 <?php
 include("../../../database/database.php");
+session_start();
 
 if(isset($_POST['submit'])){
     $status = $_POST['status_type'];
